@@ -1,0 +1,10 @@
+text = cell(100,1);
+for ii = 1:size(attributes, 2)
+    if(~isempty(attributes{ii}))
+        str = strcat({'@attribute '}, attributes{ii}, {' {'});
+        listOfValues = data(~cellfun('isempty', data(1:end,1)));
+        for jj = 1:numel(listOfValues)
+            str = strcat(str, listOfValues, ', '
+    else break
+    end
+end

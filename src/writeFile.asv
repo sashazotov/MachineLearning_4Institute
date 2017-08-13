@@ -1,0 +1,4 @@
+fileID = fopen('c:\tmp\testFile.arff', w);
+
+for ii = 1:size(header(~cellfun('isempty',header(1,:)), 1),1)
+    fprintf(fileToWrite, header{
