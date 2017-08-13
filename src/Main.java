@@ -14,16 +14,23 @@ import java.io.*;
 public class Main {
 
     String trainingFileName;
+    String testingFileName;
+    boolean testing;
 
     // throws Exception for purpose of re-throwing uncaught exception. Bad practice in this case, but done to save time.
     public static void main(String[] args) throws Exception {
 
+        Main dataClassifier = new Main();
         System.out.println("Total Arguments: " + args.length);
-        File trainingFile = new File(args[0]);
+        if(args.length >= 1){
+            dataClassifier.setTrainingFileName(args[0]);
+        }else{
+            System.out.println("No filename provided for testing data. QUIT\n");
+        }
 
-        ArffLoader trainingLoader = new ArffLoader();
-        trainingLoader.setFile(trainingFile);
+        File trainingFile = new File(dataClassifier.getTrainingFileName());
 
+        ArffLoader trainingLoader = loadData(dataClassifier.getTrainingFileName());
         Instances trainingStructure = trainingLoader.getStructure();
         trainingStructure.setClassIndex(trainingStructure.numAttributes() - 1);
 
@@ -39,5 +46,41 @@ public class Main {
 
         System.out.println("Results of the classifier training: \n" + classifier);
 
+    }
+
+
+    public static ArffLoader loadData(String filename) throws Exception{
+        File dataFile = new File(filename);
+        ArffLoader loader = new ArffLoader();
+        loader.setFile(dataFile);
+
+        return loader;
+    }
+
+
+
+    // All Getters and Setters
+    public String getTrainingFileName() {
+        return trainingFileName;
+    }
+
+    public String getTestingFileName() {
+        return testingFileName;
+    }
+
+    public boolean isTesting() {
+        return testing;
+    }
+
+    public void setTrainingFileName(String trainingFileName) {
+        this.trainingFileName = trainingFileName;
+    }
+
+    public void setTestingFileName(String testingFileName) {
+        this.testingFileName = testingFileName;
+    }
+
+    public void setTesting(boolean testing) {
+        this.testing = testing;
     }
 }
