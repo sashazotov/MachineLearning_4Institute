@@ -4,6 +4,7 @@
 // Using WEKA libraries to create, train, and test the classifier.
 // Using .ARFF data files
 
+import weka.Run;
 import weka.classifiers.Evaluation;
 import weka.classifiers.bayes.NaiveBayesUpdateable;
 import weka.core.Instance;
@@ -68,7 +69,15 @@ public class Main {
             String testSummary = test.toSummaryString();
             System.out.println(testSummary);
 
+            System.out.println(System.getProperty("user.dir"));
+            Runtime runtime = Runtime.getRuntime();
+            String pythonArg = test.numInstances() + " " + test.correct() + " " + test.incorrect();
+            Process process = runtime.exec("C:\\Users\\a\\Anaconda2\\python src\\display.py" + " " + pythonArg);
+
+            System.out.println("C:\\Users\\a\\Anaconda2\\python src\\display.py" + " " + pythonArg);
         }
+
+
 
     }
 
