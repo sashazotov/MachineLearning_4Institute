@@ -4,6 +4,7 @@
 // Using WEKA libraries to create, train, and test the classifier.
 // Using .ARFF data files
 
+import weka.classifiers.Evaluation;
 import weka.classifiers.bayes.NaiveBayesUpdateable;
 import weka.core.Instance;
 import weka.core.Instances;
@@ -35,6 +36,7 @@ public class Main {
         trainingStructure.setClassIndex(trainingStructure.numAttributes() - 1);
 
         System.out.println("Structure of the training data file: \n" + trainingStructure);
+        System.out.println("Training data sample size is: " + trainingStructure.numInstances() + " elements, and " + trainingStructure.numAttributes() + " attributes");
 
         NaiveBayesUpdateable classifier = new NaiveBayesUpdateable();
         classifier.buildClassifier(trainingStructure);
@@ -46,11 +48,39 @@ public class Main {
 
         System.out.println("Results of the classifier training: \n" + classifier);
 
+        //Testing
+        if(args.length >= 2){
+            dataClassifier.setTestingFileName(args[1]);
+            dataClassifier.setTesting(true);
+        }
+
+        if(dataClassifier.isTesting()){
+            System.out.println("About to test");
+            ArffLoader testingLoader = loadData(dataClassifier.getTestingFileName());
+            Instances testingStructure = testingLoader.getStructure();
+            Instances testingData = testingLoader.getDataSet();
+            testingStructure.setClassIndex(testingStructure.numAttributes() - 1);
+            testingData.setClassIndex(testingStructure.numAttributes() - 1);
+
+            Evaluation test = new Evaluation(testingData);
+            test.evaluateModel(classifier, testingData);
+
+            String testSummary = test.toSummaryString();
+            System.out.println(testSummary);
+
+        }
+
     }
 
 
+    // If datafile exists, create data loader
     public static ArffLoader loadData(String filename) throws Exception{
+
         File dataFile = new File(filename);
+        if(!dataFile.exists()){
+            throw new FileNotFoundException("File Does Not Exist");
+        }
+
         ArffLoader loader = new ArffLoader();
         loader.setFile(dataFile);
 

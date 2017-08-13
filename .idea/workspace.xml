@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79f0666e-eca0-4580-973e-203773f7eecb" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
     </list>
     <ignored path="MachineLearning_4Institute.iws" />
@@ -26,23 +27,23 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+            <state relative-caret-position="226">
+              <caret line="62" column="74" selection-start-line="62" selection-start-column="74" selection-end-line="62" selection-end-column="74" />
               <folding>
-                <element signature="e#0#2656#0" expanded="true" />
+                <element signature="e#0#3880#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#2148#2149#0" expanded="true" />
-                <element signature="e#2187#2188#0" expanded="true" />
-                <element signature="e#2229#2230#0" expanded="true" />
-                <element signature="e#2267#2268#0" expanded="true" />
-                <element signature="e#2301#2302#0" expanded="true" />
-                <element signature="e#2331#2332#0" expanded="true" />
-                <element signature="e#2395#2396#0" expanded="true" />
-                <element signature="e#2451#2452#0" expanded="true" />
-                <element signature="e#2513#2514#0" expanded="true" />
-                <element signature="e#2567#2568#0" expanded="true" />
-                <element signature="e#2614#2615#0" expanded="true" />
-                <element signature="e#2652#2653#0" expanded="true" />
+                <element signature="e#3372#3373#0" expanded="true" />
+                <element signature="e#3411#3412#0" expanded="true" />
+                <element signature="e#3453#3454#0" expanded="true" />
+                <element signature="e#3491#3492#0" expanded="true" />
+                <element signature="e#3525#3526#0" expanded="true" />
+                <element signature="e#3555#3556#0" expanded="true" />
+                <element signature="e#3619#3620#0" expanded="true" />
+                <element signature="e#3675#3676#0" expanded="true" />
+                <element signature="e#3737#3738#0" expanded="true" />
+                <element signature="e#3791#3792#0" expanded="true" />
+                <element signature="e#3838#3839#0" expanded="true" />
+                <element signature="e#3876#3877#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,7 +70,7 @@
     <option name="x" value="1315" />
     <option name="y" value="-571" />
     <option name="width" value="1436" />
-    <option name="height" value="836" />
+    <option name="height" value="1171" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -150,7 +151,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Main" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="&quot;C:\Program Files\Weka-3-8\data\weather.numeric.arff&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;C:\Program Files\Weka-3-8\data\weather.numeric.arff &quot; &quot;C:\Program Files\Weka-3-8\data\weather.numeric.test.arff&quot;" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -458,7 +459,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1315" y="-571" width="1436" height="836" extended-state="0" />
+    <frame x="1315" y="-571" width="1436" height="1171" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -468,7 +469,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3921002" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -509,23 +510,23 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        <state relative-caret-position="226">
+          <caret line="62" column="74" selection-start-line="62" selection-start-column="74" selection-end-line="62" selection-end-column="74" />
           <folding>
-            <element signature="e#0#2656#0" expanded="true" />
+            <element signature="e#0#3880#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#2148#2149#0" expanded="true" />
-            <element signature="e#2187#2188#0" expanded="true" />
-            <element signature="e#2229#2230#0" expanded="true" />
-            <element signature="e#2267#2268#0" expanded="true" />
-            <element signature="e#2301#2302#0" expanded="true" />
-            <element signature="e#2331#2332#0" expanded="true" />
-            <element signature="e#2395#2396#0" expanded="true" />
-            <element signature="e#2451#2452#0" expanded="true" />
-            <element signature="e#2513#2514#0" expanded="true" />
-            <element signature="e#2567#2568#0" expanded="true" />
-            <element signature="e#2614#2615#0" expanded="true" />
-            <element signature="e#2652#2653#0" expanded="true" />
+            <element signature="e#3372#3373#0" expanded="true" />
+            <element signature="e#3411#3412#0" expanded="true" />
+            <element signature="e#3453#3454#0" expanded="true" />
+            <element signature="e#3491#3492#0" expanded="true" />
+            <element signature="e#3525#3526#0" expanded="true" />
+            <element signature="e#3555#3556#0" expanded="true" />
+            <element signature="e#3619#3620#0" expanded="true" />
+            <element signature="e#3675#3676#0" expanded="true" />
+            <element signature="e#3737#3738#0" expanded="true" />
+            <element signature="e#3791#3792#0" expanded="true" />
+            <element signature="e#3838#3839#0" expanded="true" />
+            <element signature="e#3876#3877#0" expanded="true" />
           </folding>
         </state>
       </provider>
