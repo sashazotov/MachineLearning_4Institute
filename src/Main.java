@@ -121,6 +121,7 @@ public class Main {
         Runtime runtime = Runtime.getRuntime();
         String arguments = totalInstances + " " + correctlyClassified + " " + incorrectlyClassified;
         Process process = runtime.exec(file + " " + arguments);
+        System.out.println(file + " " + arguments);
     }
 
     // If datafile exists, create data loader
