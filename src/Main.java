@@ -2,7 +2,11 @@
 // Not intended to be of production quality and reliability, purely because time is limited
 
 // Using WEKA libraries to create, train, and test the classifier.
+// I never used WEKA before working on this project, and did not even have WEKA installed unitl yesterday (08/12).
+// Not using any packages and/or libraries I used before to
 // Using .ARFF data files
+
+// Could have create 2 classes with one extending another to show Superclass - Subclass relationship
 
 import weka.Run;
 import weka.classifiers.Evaluation;
@@ -20,7 +24,8 @@ public class Main {
     String trainingFileName;
     String testingFileName;
     boolean testing;
-    final double PI = 3.14;
+    // don't need Euler's number here, but just wanted to include a final variable
+    final double Eulers = 2.718;
 
     // throws Exception for purpose of re-throwing uncaught exception. Bad practice in this case, but done to save time.
     public static void main(String[] args) throws Exception {
@@ -43,11 +48,11 @@ public class Main {
             trainingLoader = loadData(dataClassifier.getTrainingFileName());
         }
         catch (ArrayIndexOutOfBoundsException exc){
-            //this will not ever happen because function quits if no arguments were passed
+            //this will not happen because function quits if no arguments were passed
             System.err.println(exc.getMessage() + "\nQUITTING"); return;
         }
         catch (FileNotFoundException exc){
-            System.err.println(exc.getMessage() + "\nQUITTING"); return;
+            System.err.println("Training data file not found " + exc.getMessage() + "\nQUITTING"); return;
         }
 
         Instances trainingStructure = trainingLoader.getStructure();
@@ -100,6 +105,9 @@ public class Main {
 
             // display bar-chart with python
             //System.out.println(System.getProperty("user.dir"));
+            //calling full file path is bad practice. Need to include the Anaconda2 in environmental variables, not to call full path.
+            //also need to separate the 'python' command, and the .py file, and concatenate when calling
+            //need to capture the command line output to see errors
             callPython("C:\\Users\\a\\Anaconda2\\python src\\display.py", (int)test.numInstances(), (int)test.correct(), (int)test.incorrect());
             //Runtime runtime = Runtime.getRuntime();
             //String pythonArg = test.numInstances() + " " + test.correct() + " " + test.incorrect();
@@ -118,11 +126,13 @@ public class Main {
     // If datafile exists, create data loader
     public static ArffLoader loadData(String filename) throws Exception{
 
+        // check if the data file is .arff file
         if(!isArff(filename)){
             throw new FileNotFoundException("Wrong File Type");
         }
 
         File dataFile = new File(filename);
+        // check if file exists
         if(!dataFile.exists()){
             throw new FileNotFoundException("File Does Not Exist");
         }
@@ -167,5 +177,6 @@ public class Main {
     public void setTesting(boolean testing) {
         this.testing = testing;
     }
+    // overloading the method just for the fun of it.
     public void setTesting(int testing) { this.testing = testing!=0; }
 }
