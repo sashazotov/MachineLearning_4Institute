@@ -1,7 +1,7 @@
 dataToSave = cell(100,1);
 dataToSave{1} = '@data';
 
-for ii = 1:size(data(~cellfun('isempty',data(1,:)), 1),1)
+for ii = 1:size(data(~cellfun('isempty',data(:,1)), 1),1)
     str = '';
     dataRaw = data(ii, ~cellfun('isempty',data(ii,:)));
     for jj = 1:numel(dataRaw)

@@ -1,0 +1,11 @@
+@new file create in matlab gui routine
+@attribute gender {female, male}
+@attribute age numeric
+@attribute weight numeric
+@attribute education {BS, MS}
+@attribute rich {no, yes}
+@data
+male,24,160,BS,no
+male,46,210,MS,yes
+female,28,140,BS,no
+female,50,165,BS,yes
